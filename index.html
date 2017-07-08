@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Foto Service</title>
+        <link rel="stylesheet" href="/css/material-components-web.css">
+        <script src="/js/material-components-web.js" type="text/javascript"></script>
+        <style>
+            html,body{
+                margin: 0;
+                height: 100%;
+            }
+            #wrapper{
+                height: 100%;                
+            }
+            header{
+                height: 50px;
+                position: relative;
+            }
+            .foldercontainer{
+                margin: 5em;  
+                width: 50px;
+                height: 500px;
+                background-color: red;             
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header class="mdc-toolbar mdc-toolbar--fixed">
+                <div class="mdc-toolbar__row">
+                    <span class="mdc-toolbar__title">Foto service</span>
+                </div>
+            </header>
+            <main>                
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+              
+                <script>
+                    function clickme(){
+                        $.ajax({
+                                url: 'http://192.168.2.104:8080/',
+                                dataType: 'jsonp',
+                                success: function(data) {
+                                    var e = document.getElementById("wrapper");
+                                    var child = document.createElement("div");
+                                    child.innerHTML = data.error;
+                                    e.appendChild(child);
+                                },
+                                error: function(jqXHR, textStatus, errorThrown) {
+                                    alert('error ' + textStatus + " " + errorThrown);
+                                }
+                            });                       
+                    }
+                
+                </script>
+                <button style="height:500px; width:500px;" onclick="clickme()">Hallo</button>
+                <div style="display:flex;flex-wrap: wrap;">
+                    <div class="foldercontainer">
+                        <img src="/placeholder.jpg" alt="NoPic">    
+                    </div>
+                    <div class="foldercontainer">
+                        <img src="/placeholder.jpg" alt="NoPic">    
+                    </div>
+                    <div class="foldercontainer">
+                        <img src="/placeholder.jpg" alt="NoPic">    
+                    </div>
+                    <div class="foldercontainer">
+                        <img src="/placeholder.jpg" alt="NoPic">    
+                    </div>
+                    <div class="foldercontainer">
+                        <img src="/placeholder.jpg" alt="NoPic">    
+                    </div>
+                    <div class="foldercontainer">
+                        <img src="/placeholder.jpg" alt="NoPic">    
+                    </div>
+                    <div class="foldercontainer">
+                        <img src="/placeholder.jpg" alt="NoPic">    
+                    </div>
+                    <div class="foldercontainer">
+                        <img src="/placeholder.jpg" alt="NoPic">    
+                    </div>
+                    <div class="foldercontainer">
+                        <img src="/placeholder.jpg" alt="NoPic">    
+                    </div>
+                    <div class="foldercontainer">
+                        <img src="/placeholder.jpg" alt="NoPic">    
+                    </div>
+                    <div class="foldercontainer">
+                        <img src="/placeholder.jpg" alt="NoPic">    
+                    </div>
+                    <div class="foldercontainer">
+                        <img src="/placeholder.jpg" alt="NoPic">    
+                    </div>
+                    <div class="foldercontainer">
+                        <img src="/placeholder.jpg" alt="NoPic">    
+                    </div>                                                                                                                                                                                                                                         
+
+                </div>
+            </main>
+            <footer></footer>
+        </div>
+    </body>
+    <script>mdc.autoInit()</script>
+</html>
